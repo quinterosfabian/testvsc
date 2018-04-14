@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formularios Especial</title>
+    <style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    }
+    h1 {
+        font-size: 1.3rem;
+    }
+    section {
+        background-color: #eee;
+        border-top: 4px solid #ccc;
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+    h2 {
+        margin-top: 0px;
+        margin-bottom: 25px;
+        font-size: 1rem;
+        border-bottom: 2px dotted #ccc
+    }
+    h2 span{
+        display: inline-block;
+        background-color: #393;
+        color: #fff;
+        width: 30px;
+        height: 30px;
+        border-radius: 15px;
+        line-height: 30px;
+        text-align: center;
+        font-weight: normal;
+        font-size: 15px;
+        margin-right: 10px;
+    }
+    .campo {
+        margin-bottom: 15px;
+        display: flex;
+        font-size: 0.8rem;
+    }
+    .campo label {
+        margin-right: 15px;
+        width: 200px;
+        text-align: right;
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+    li {
+        display: inline;
+        margin-right: 10px;
+    }
+    .metodopago {
+        text-decoration: none;
+        font-weight: bold;
+    }
+    .metodopago img {
+        margin-right: 10px;
+        vertical-align: middle;
+    }
+    .alternativapago {
+        display: none;
+        margin-bottom: 10px;
+    }
+    .enviar {
+        margin-left: 220px;
+    }
+    .enviar input {
+        font-weight: bold;
+        color: #fff;
+        padding: 10px;
+        font-size: 18px;
+        letter-spacing: 1px;
+        border-radius: 5px;
+        border: 1px solid #b83a10;
+        cursor: pointer;
+        background: #e28204
+    }
+    </style>
+</head>
+<body>
+    <h1>Donaciones</h1>
+    <section>
+        <h2><span>1</span>Seleccione la donación. </h2>
+        <div class="campo">
+            <label for="moneda">Moneda</label>
+            <div>
+                <select name="moneda" id="moneda">
+                    <option value="Euro">Euro</option>
+                    <option value="USS">Dolar</option>
+                    <option value="Pesos">Peso</option>
+                </select>
+            </div>
+        </div>
+        <div class="campo">
+            <label>Cantidad</label>
+            <div>
+                <ul>
+                    <li><input type="radio" name="Cantidad" value="500">500</li>
+                    <li><input type="radio" name="Cantidad" value="200">200</li>
+                    <li><input type="radio" name="Cantidad" value="100">100</li>
+                    <li><input type="radio" name="Cantidad" value="50">50</li>
+                </ul>
+                <div>
+                    <input type="radio" name="Cantidad" value="otra">Otra:
+                    <input type="text" name="cantidad otra">
+                </div>
+            </div>
+        </div>
+        <div class="campo">
+            <label>Tipo de Donación</label>
+            <div>
+                <input type="radio" name="tipo donacion" value="una vez" checked> Una vez
+            </div>
+        </div>
+    </section>
+    <section>
+        <h2>
+            <span>2</span>Introduce tus datos personales
+        </h2>
+        <div class="campo">
+            <label for="tratamiento" id="tratamiento"></label>
+            <div>
+                <select name="tratamiento" id="tratamiento">
+                    <option value="Sr">Sr.</option>
+                    <option value="Sra">Sra.</option>
+                    <option value="Srta">Srta.</option>
+                    <option value="Excelentisimo">Excelentisimo.</option>
+                </select>
+            </div>
+        </div>
+        <div class="campo">
+            <label for="nombre">Nombre:</label>
+            <div>
+                <input type="text" name="nombre" id="nombre">
+            </div>
+        </div>
+        <div class="campo">
+            <label for="apellidos">Apellido:</label>
+            <div>
+                <input type="text" name="apellidos" id="apellidos">
+            </div>            
+        </div>
+    </section>
+    <section>
+        <h2>
+            <span>3</span>
+            Elige el metodo de pago
+        </h2>
+        <div class="campo">
+            <div>
+                <a href="#" class="metodopago" data-target="alternativatarjeta">
+                    <img src="./images/card.jpg" alt="Pago con tarjeta">
+                    Pago con tarjeta
+                </a>
+            </div>
+        </div>
+            <div class="alternativapago" id="alternativatarjeta">
+                <div class="campo">
+                    <label></label>
+                    <ul>
+                        <li><img src="./images/amex_small.png" alt="Tarjeta American Express"></li>
+                        <li><img src="./images/mc_small.png" alt="Tarjeta Master Card"></li>                        
+                        <li><img src="./images/visa_small.png" alt="Tarjeta Visa"></li>
+                    </ul>
+                </div>
+                <div class="campo">
+                    <label for="Tarjeta">Número de tarjeta:</label>
+                    <div> 
+                        <input type="text" name="Tarjeta" id="Tarjeta">
+                    </div>
+                </div>
+                <div class="campo">
+                    <label for="Tarjetanombre">Nombre:</label>
+                    <div> 
+                        <input type="text" name="Tarjetanombre" id="Tarjetanombre">
+                    </div>
+                </div>
+                <div class="campo">
+                        <label>Expiración:</label>
+                        <div> 
+                            <select name="expiracionmes" id="expiracionmes">
+                                <option value="1">01</option>
+                                <option value="2">02</option>
+                                <option value="3">03</option>
+                                <option value="4">04</option>
+                                <option value="5">05</option>
+                                <option value="6">06</option>
+                                <option value="7">07</option>
+                                <option value="8">08</option>
+                                <option value="9">09</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                            </select>
+                            /
+                            <select name="expiracionano" id="expiracionano">
+                                <option value="2018">2018</option>
+                                <option value="2019">2019</option>
+                                <option value="2020">2020</option>
+                                <option value="2021">2021</option>
+                                <option value="2022">2022</option>
+                            </select>
+                        </div>
+                    </div>                
+                <div class="campo">
+                    <label for="cvc">CVC/CVV/CID</label>
+                    <div>
+                       <input type="text" name="cvc" id="cvc">
+                    </div>
+                </div>
+                <div class="enviar">
+                    <input type="submit" value="Donar">
+                </div>
+            </div>                
+        </div>        
+        <div class="campo">
+            <div>
+               <a href="#" class="metodopago" data-target="alternativapaypal">
+                    <img src="./images/pypal.jpg" alt="Pagar por Paypal">
+                    Pago con Paypal
+                </a>
+            </div>
+        </div>
+            <div class="alternativapago" id="alternativapaypal">
+                <p>Para pagar con Paypal vamos a redirigirlo al sitio de Paypal. Al completar el pago puede volver al sitio y verificar el pago.                    
+                </p>
+                <div class="enviar">
+                    <input type="submit" value="Donar con Paypal">
+                </div>                
+            </div>
+        </div>
+    </section>
+
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script>
+    $(function() {
+        $('.metodopago').on('click', function(e) {
+            e.preventDefault();
+            var elem = $(this);
+            var idTarget = elem.data('target');
+            $('#' + idTarget).toggle(500);
+        })
+    })
+    </script>
+</body>
+</html>

@@ -4,16 +4,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Tablas</title>
+
+    <style>
+        table {
+            width: 300px;        
+        }
+        td, th {
+        border: 1px solid #ddd; 
+        padding: 10px;
+        }
+        img {
+        width: 150px;
+        }
+    </style>
+    
 </head>
 <body>
-    <p>
-        Es un demo para crear un repositorio desde Visual Studio Code.
-    </p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique sunt beatae quasi, esse laudantium quod dolore reprehenderit laboriosam laborum facilis, eius necessitatibus modi ipsa quo eaque maiores debitis! Iste, similique.        
-    </p>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit, officiis, numquam amet aliquam fugit mollitia suscipit atque reprehenderit impedit dicta totam inventore voluptatum nam? Dolor quibusdam facere sunt ducimus ut.        
-    </p>
-    <p>Cuarto commit</p>
+    <h1>Tablas: Ya casi no se utilizan en HTML5</h1>
+
+    <!-- <table>
+        <tr>
+            <th colspan="2">1</th>                        
+            <th>3</th>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td rowspan="2">5</td>
+            <td>6</td>
+        </tr>
+        <tr>
+        <td>7</td>        
+        <td>9</td>
+    </tr>
+    </table> -->
+
+    <table>
+        <tr>
+            <td></td>
+            <td>Foto</td>
+            <th>Planeta</th>
+            <th>Densidad</th>
+            <th>Distancia al Sol</th>
+            <th>Vel. de Ratación.</th>
+        </tr>
+        <tr>
+            <td rowspan="2">Antes del sol</td>
+            <td><img src="./images/mercurio.jpg" alt=""></td>
+            <td>Mercurio</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td><img src="./images/venus.jpg" alt=""></td>
+            <td>Venus</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><img src="./images/tierra.jpg" alt=""></td>
+            <td>Tierra</td>
+            <td>12</td>
+            <td>13</td>
+            <td>14</td>
+        </tr>
+        <tr>
+            <td rowspan="3">Despues del sol</td>
+            <td><img src="./images/marte.jpg" alt=""></td>
+            <td>Martes</td>
+            <td>45</td>
+            <td>55</td>
+            <td>66</td>
+        </tr>
+        <tr>
+                <td><img src="./images/jupiter.jpg" alt=""></td>
+            <td>Jupiter</td>
+            <td>3</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+        <tr>
+                <td><img src="./images/saturno.jpg" alt=""></td>
+            <td>Saturno</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+        </tr>        
+    </table>
+
+
+
 </body>
 </html>
